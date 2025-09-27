@@ -21,7 +21,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .hero-bg {
-            
+            background-image: linear-gradient(rgba(10, 15, 31, 0.85), rgba(10, 15, 31, 1)), url('https://placehold.co/1920x1080/0a0f1f/f97316?text=Ambiente+Climatizado');
             background-size: cover;
             background-position: center;
         }
@@ -65,8 +65,11 @@
 
         /* Animação do carrossel de marcas */
         @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
           to {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
         }
         .animate-scroll {
@@ -177,29 +180,31 @@
         </section>
         
         <!-- Seção de Marcas Parceiras -->
-        <section class="py-16 md:py-20 overflow-x-hidden">
+        <section class="py-16 md:py-20">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12 scroll-animation">
                     <h3 class="text-2xl md:text-3xl font-bold">Trabalhamos com as Melhores Marcas</h3>
                 </div>
-                <div class="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-                    <div class="flex w-[200%] animate-scroll hover:[animation-play-state:paused]">
+            </div>
+            <div class="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_30px,_black_calc(100%-30px),transparent_100%)]">
+                <div class="flex w-max">
+                    <div class="flex items-center flex-shrink-0 animate-scroll ">
                         <!-- Logos -->
-                        <div class="flex w-1/2 items-center justify-around">
-                            <img src="marcas/logo_png.png" alt="Logo da LG" class="h-12 md:h-14 max-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="marcas/samsung_png.webp" alt="Logo da Samsung" class="h-16 md:h-20 max-w-[180px] grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="marcas/daikin_png.png" alt="Logo da Daikin" class="h-12 md:h-14 max-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="marcas/philco_png.png" alt="Logo da Carrier" class="h-12 md:h-14 max-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="marcas/midea_png.png" alt="Logo da Midea" class="h-12 md:h-14 max-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                        </div>
-                         <!-- Logos Duplicados -->
-                        <div class="flex w-1/2 items-center justify-around">
-                            <img src="marcas/logo_png.png" alt="Logo da LG" class="h-12 md:h-14 max-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="marcas/samsung_png.webp" alt="Logo da Samsung" class="h-16 md:h-20 max-w-[180px] grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="marcas/daikin_png.png" alt="Logo da Daikin" class="h-12 md:h-14 max-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="marcas/philco_png.png" alt="Logo da Carrier" class="h-12 md:h-14 max-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                            <img src="marcas/midea_png.png" alt="Logo da Midea" class="h-12 md:h-14 max-w-[150px] grayscale hover:grayscale-0 transition-all duration-300">
-                        </div>
+                        <img src="marcas/logo_png.png" alt="Logo da LG" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/samsung_png.webp" alt="Logo da Samsung" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/daikin_png.png" alt="Logo da Daikin" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/philco_png.png" alt="Logo da Carrier" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/midea_png.png" alt="Logo da Fujitsu" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/tcl_png.png" alt="Logo da Midea" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                    <div class="flex items-center flex-shrink-0 animate-scroll ">
+                        <!-- Logos -->
+                        <img src="marcas/logo_png.png" alt="Logo da LG" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/samsung_png.webp" alt="Logo da Samsung" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/daikin_png.png" alt="Logo da Daikin" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/philco_png.png" alt="Logo da Carrier" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/midea_png.png" alt="Logo da Fujitsu" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <img src="marcas/tcl_png.png" alt="Logo da Midea" class="h-12 md:h-16 mx-6 md:mx-10 grayscale hover:grayscale-0 transition-all duration-300">
                     </div>
                 </div>
             </div>
@@ -288,7 +293,7 @@
                 </div>
                 <div class="max-w-2xl mx-auto">
                     <!-- O action do formulário aponta para o Formspree. SUBSTITUA O CÓDIGO pelo seu. -->
-                    <form id="contact-form" action="https://formspree.io/f/mjkagakz" method="POST" class="space-y-6 scroll-animation">
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="space-y-6 scroll-animation">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <input type="text" name="name" placeholder="Seu Nome" required class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
                             <input type="email" name="email" placeholder="Seu E-mail" required class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
@@ -430,5 +435,7 @@
     </script>
 </body>
 </html>
+
+
 
 
