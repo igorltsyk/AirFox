@@ -21,7 +21,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .hero-bg {
-            
+            background-image: linear-gradient(rgba(10, 15, 31, 0.85), rgba(10, 15, 31, 1)), url('https://placehold.co/1920x1080/0a0f1f/f97316?text=Ambiente+Climatizado');
             background-size: cover;
             background-position: center;
         }
@@ -71,7 +71,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="text-2xl font-bold tracking-wider">
-                    <a href="#" class="text-orange-500">Air<span class="text-white">Fox</span></a>
+                    <a href="#" class="text-white">Air<span class="text-orange-500">Fox</span></a>
                 </div>
                 <nav class="hidden md:flex space-x-8">
                     <a href="#services" class="text-gray-300 hover:text-orange-400 transition-colors duration-300">Serviços</a>
@@ -97,7 +97,7 @@
     <div id="mobile-menu-panel" class="md:hidden fixed top-0 right-0 h-full w-72 bg-[#0f172a] glassmorphism transform translate-x-full z-50">
         <div class="flex justify-between items-center p-4 border-b border-gray-700">
              <div class="text-xl font-bold tracking-wider">
-                <a href="#" class="text-orange-500">Air<span class="text-white">Fox</span></a>
+                <a href="#" class="text-white">Air<span class="text-orange-500">Fox</span></a>
             </div>
             <button id="close-menu-button" class="text-gray-300 hover:text-white">
                 <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -186,8 +186,6 @@
             </div>
         </section>
 
-        <!-- Seção de Diferenciais (Removida e Integrada em Depoimentos) -->
-        
         <!-- Seção de Depoimentos -->
         <section id="testimonials" class="py-20 md:py-28">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -250,19 +248,21 @@
                     <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Solicite um orçamento sem compromisso e leve a inovação para o seu ambiente.</p>
                 </div>
                 <div class="max-w-2xl mx-auto">
-                    <form action="#" method="POST" class="space-y-6 scroll-animation">
+                    <!-- O action do formulário aponta para o Formspree. SUBSTITUA O CÓDIGO pelo seu. -->
+                    <form id="contact-form" action="https://formspree.io/f/mjkagakz" method="POST" class="space-y-6 scroll-animation">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <input type="text" placeholder="Seu Nome" class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
-                            <input type="email" placeholder="Seu E-mail" class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
+                            <input type="text" name="name" placeholder="Seu Nome" required class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
+                            <input type="email" name="email" placeholder="Seu E-mail" required class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
                         </div>
-                        <input type="text" placeholder="Assunto" class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
-                        <textarea placeholder="Sua Mensagem" rows="5" class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition"></textarea>
+                        <input type="text" name="subject" placeholder="Assunto" required class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition">
+                        <textarea name="message" placeholder="Sua Mensagem" rows="5" required class="w-full bg-gray-900 bg-opacity-50 border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition"></textarea>
                         <div class="text-center">
                             <button type="submit" class="bg-orange-500 text-white font-bold py-3 px-10 text-lg rounded-lg hover:bg-orange-600 transition-transform duration-300 transform hover:scale-105 btn-glow">
                                 Enviar Mensagem
                             </button>
                         </div>
                     </form>
+                    <p id="form-status" class="text-center mt-4 text-lg"></p>
                 </div>
             </div>
         </section>
@@ -272,7 +272,7 @@
     <footer class="bg-black bg-opacity-30 py-10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
             <div class="text-2xl font-bold tracking-wider mb-4">
-                 <a href="#" class="text-orange-500">Air<span class="text-white">Fox</span></a>
+                 <a href="#" class="text-white">Air<span class="text-orange-500">Fox</span></a>
             </div>
             <p class="mb-4">O futuro do seu conforto começa aqui.</p>
             <div class="flex justify-center space-x-6 mb-6">
@@ -282,14 +282,15 @@
                 <a href="#" class="hover:text-orange-400 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                 </a>
+                
                  <a href="#" class="hover:text-orange-400 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </a>
             </div>
-            <p>&copy; <span id="year"></span> Igor Leal Todos os direitos reservados.</p>
+            <p>&copy; <span id="year"></span> AirFox. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-     <!-- Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/5511932140396" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50 flex items-center justify-center">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.875 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.165-1.68c1.8.992 3.833 1.52 5.827 1.521h.005c6.547 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -306,7 +307,7 @@
         const openMenu = () => {
             mobileMenuPanel.classList.add('menu-open');
             menuOverlay.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden'); // Impede o scroll do fundo
+            document.body.classList.add('overflow-hidden');
         };
 
         const closeMenu = () => {
@@ -319,7 +320,6 @@
         closeMenuButton.addEventListener('click', closeMenu);
         menuOverlay.addEventListener('click', closeMenu);
         
-        // Fechar menu mobile ao clicar em um link
         document.querySelectorAll('#mobile-menu-panel a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
@@ -352,10 +352,42 @@
         scrollAnimations.forEach(el => {
             observer.observe(el);
         });
+
+        // Lógica do Formulário com Formspree
+        const form = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        async function handleSubmit(event) {
+          event.preventDefault();
+          const data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              formStatus.textContent = "Obrigado! Sua mensagem foi enviada com sucesso.";
+              formStatus.style.color = 'lightgreen';
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  formStatus.textContent = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  formStatus.textContent = "Oops! Ocorreu um problema ao enviar seu formulário."
+                  formStatus.style.color = 'red';
+                }
+              })
+            }
+          }).catch(error => {
+            formStatus.textContent = "Oops! Ocorreu um problema ao enviar seu formulário."
+            formStatus.style.color = 'red';
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
     </script>
 </body>
 </html>
-
-
-
 
